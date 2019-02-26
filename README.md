@@ -6,6 +6,7 @@ The idea is that you run this along-side an nginx instance, and it'll handle aut
 
 Set the following environment variables
 
+* CALLBACK\_URL: the callback url (https://$COOKIE\_DOMAIN/auth/saml/callback)
 * SSO\_TARGET\_URL: the target url specified in okta
 * SSO\_ISSUER: the accepted audience in okta
 * PROXY\_TARGET: the address of the target application you are authing for

@@ -31,6 +31,7 @@ module OktaAuthProxy
                                      domain: COOKIE_DOMAIN
       app.use OmniAuth::Builder do
         provider :saml,
+        assertion_consumer_service_url:     ENV['CALLBACK_URL'],
         issuer:                             ENV['SSO_ISSUER'],
         idp_sso_target_url:                 ENV['SSO_TARGET_URL'],
         idp_cert:                           File.read( ENV['CERT_PATH'] || 'okta_cert.pem'),
