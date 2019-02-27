@@ -1,5 +1,7 @@
 # Okta Auth Proxy
 
+**This is a fork of the original project that contains significant changes to its functionality. See the Git history for details.**
+
 The idea is that you run this along-side an nginx instance, and it'll handle authentication for you for an application or page that doesn't understand SAML or okta.
 
 # Configuration

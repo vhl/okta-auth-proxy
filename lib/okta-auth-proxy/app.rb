@@ -32,6 +32,7 @@ module OktaAuthProxy
           headers "X-Remote-User" => session[:email]
           headers "X-Reproxy-URL" => File.join(url, request.fullpath)
           headers "X-Accel-Redirect" => "/reproxy"
+          headers "X-Method" => verb.to_s.upcase
           redirect to('http://localhost')
         end
       end
