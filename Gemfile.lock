@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     okta-auth-proxy (0.0.5)
-      activesupport
+      activesupport (~> 6.1.7.8)
       em-synchrony (~> 1.0.4)
       omniauth (~> 1.3.1)
       omniauth-saml (~> 1.5.0)
@@ -13,15 +13,15 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.0.3.4)
+    activesupport (6.1.7.10)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-      zeitwerk (~> 2.2, >= 2.2.2)
-    byebug (8.2.5)
-    coderay (1.1.2)
-    concurrent-ruby (1.1.7)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    byebug (11.1.3)
+    coderay (1.1.3)
+    concurrent-ruby (1.3.5)
     daemons (1.3.1)
     diff-lcs (1.3)
     docile (1.1.5)
@@ -29,14 +29,15 @@ GEM
       eventmachine (>= 1.0.0.beta.1)
     eventmachine (1.2.7)
     hashie (3.6.0)
-    i18n (1.8.5)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     json (1.8.6)
     method_source (0.8.2)
-    mini_portile2 (2.4.0)
-    minitest (5.14.2)
-    nokogiri (1.10.1)
-      mini_portile2 (~> 2.4.0)
+    mini_portile2 (2.8.9)
+    minitest (5.25.5)
+    nokogiri (1.18.8)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     omniauth (1.3.2)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
@@ -47,13 +48,15 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.3.0)
-      byebug (~> 8.0)
+    pry-byebug (3.8.0)
+      byebug (~> 11.0)
       pry (~> 0.10)
-    rack (1.6.11)
+    racc (1.8.1)
+    rack (1.6.13)
     rack-protection (1.5.5)
       rack
     rake (10.4.2)
+    rexml (3.4.1)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -67,8 +70,9 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
-    ruby-saml (1.9.0)
-      nokogiri (>= 1.5.10)
+    ruby-saml (1.18.0)
+      nokogiri (>= 1.13.10)
+      rexml
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -84,11 +88,10 @@ GEM
       eventmachine (~> 1.0, >= 1.0.4)
       rack (~> 1.0)
     thor (0.20.3)
-    thread_safe (0.3.6)
     tilt (2.0.9)
-    tzinfo (1.2.7)
-      thread_safe (~> 0.1)
-    zeitwerk (2.4.1)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   ruby
@@ -96,10 +99,7 @@ PLATFORMS
 DEPENDENCIES
   okta-auth-proxy!
   pry (~> 0.10.3)
-  pry-byebug (~> 3.3.0)
+  pry-byebug (~> 3.8.0)
   rake (~> 10.4.2)
   rspec (~> 3.2.0)
   simplecov (~> 0.10.0)
-
-BUNDLED WITH
-   2.1.4
