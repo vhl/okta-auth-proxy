@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/dalehamel/okta-auth-proxy'
   s.license = 'MIT'
   s.add_runtime_dependency 'activesupport', ['~>6.1.7.8']
+  s.add_runtime_dependency 'concurrent-ruby', ['1.3.4']
   s.add_runtime_dependency 'em-synchrony', ['~>1.0.4']
   s.add_runtime_dependency 'omniauth', ['~>1.3.1']
   s.add_runtime_dependency 'omniauth-saml', ['~>1.5.0']
