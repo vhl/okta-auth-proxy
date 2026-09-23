@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'omniauth', ['~>1.3.1']
   s.add_runtime_dependency 'omniauth-saml', ['~>1.5.0']
   s.add_runtime_dependency 'sinatra', ['~>1.4.7']
-  s.add_runtime_dependency 'thin', ['~>1.6.4']
+  s.add_runtime_dependency 'thin', ['~>1.8.2']
   s.add_runtime_dependency 'thor', ['>= 0.19.1']
   s.add_development_dependency 'pry', ['~>0.10.3']
   s.add_development_dependency 'pry-byebug', ['~>3.8.0']
