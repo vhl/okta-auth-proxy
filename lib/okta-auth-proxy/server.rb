@@ -18,7 +18,11 @@ module OktaAuthProxy
           run app
         end
       end
-      @server = Thin::Server.new(port, bind, dispatch, threadpool_size: threads).backend
+      # Thin 1.8 takes an options Hash. A keyword argument is rejected on
+      # Ruby 3 because Server#initialize only splats positional args.
+      server = Thin::Server.new(port, bind, dispatch, { threadpool_size: threads })
+      server.threadpool_size = threads
+      @server = server.backend
     end
 
     def start
