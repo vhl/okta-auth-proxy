@@ -1,5 +1,7 @@
 require 'sinatra/base'
 require 'omniauth'
+# OmniAuth's default mock auth hash sets InfoHash#name, which Hashie warns about.
+OmniAuth::AuthHash::InfoHash.disable_warnings
 require 'omniauth-saml'
 require 'securerandom'
 require 'uri'
